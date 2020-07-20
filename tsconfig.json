@@ -11,5 +11,8 @@
         "allowSyntheticDefaultImports": true,
         "resolveJsonModule": true,
         "esModuleInterop": true
-    }
+    },
+    "include": [
+        "server/**/*.ts"
+    ]
 }
