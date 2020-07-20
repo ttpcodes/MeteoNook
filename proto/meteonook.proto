@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+service MeteoNook {
+  rpc GetOverview(IslandInfo) returns (Overview) {}
+}
+
+enum Hemisphere {
+  NORTH = 0;
+  SOUTH = 1;
+}
+
+message IslandInfo {
+  uint32 seed = 1;
+  Hemisphere hemisphere = 2;
+}
+
+message Overview {
+  string forecast = 1;
+  string pattern = 2;
+}
