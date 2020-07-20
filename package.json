@@ -42,6 +42,7 @@
   "scripts": {
     "build": "npx webpack --config webpack.config.js",
     "build:proto": "protoc --proto_path=proto --js_out=import_style=commonjs,binary:server/proto --grpc_out=server/proto --plugin=protoc-gen-grpc=node_modules/.bin/grpc_tools_node_protoc_plugin proto/meteonook.proto && protoc --proto_path=proto --plugin=protoc-gen-ts=node_modules/.bin/protoc-gen-ts --ts_out=server/proto proto/meteonook.proto",
+    "build:wasm": "wasm-pack build -t nodejs",
     "dev": "npx webpack-dev-server -d",
     "devOpen": "npx webpack-dev-server -d --host \"0.0.0.0\"",
     "setup": "./node_modules/.bin/tsc && ln -sf ../pkg dist/ && ln -sf ../../server/proto dist/server/",
